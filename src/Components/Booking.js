@@ -2,7 +2,7 @@ import React from 'react'
 import CarBuy from "../Images/3646377.jpg"
 import ReturnCar from "../Images/8867909.jpg"
 
-export default function (props) {
+export default function Booking(props) {
 
     
   return (
