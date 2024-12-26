@@ -114,7 +114,7 @@ const AddCar = (props) => {
           </div>
         </div>
         <div className="col-12">
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <button type="submit" className={`btn btn-${props.mode === 'dark'?'light':'dark'} ms-4 mt-3`}   >Submit</button>
         </div>
       </form>
     </div>

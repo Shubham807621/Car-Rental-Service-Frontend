@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function Customer() {
+export default function Customer(props) {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -52,7 +52,7 @@ export default function Customer() {
 
   return (
     <>
-    <div className='Form-block container bg-warning'>
+    <div className={`Form-block container bg-${props.mode}`} style={{color: props.mode==='dark'?'white':'black'}} >
             <h2 className='booking-title pt-5'>Please Enter You Details</h2>
                 <form className='mt-4' onSubmit={handleSubmit} >
                         <input type="text" placeholder='Enter Your Name' name='name'/>
@@ -64,7 +64,7 @@ export default function Customer() {
                         <input type="date" placeholder='Enter Your State' name='pickupDate'/>
                         <input type="date" placeholder='Enter Your State' name='returnDate'/> <br />
 
-                        <button type="submit" className="btn btn-dark ms-4 mt-3" onClick={handleButtonClick}>Submit</button>
+                        <button type="submit" className={`btn btn-${props.mode === 'dark'?'light':'dark'} ms-4 mt-3`} onClick={handleButtonClick} >Submit</button>
 
                 </form>
         </div>
